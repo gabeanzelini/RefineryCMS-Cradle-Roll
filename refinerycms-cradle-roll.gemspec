@@ -50,10 +50,7 @@ Gem::Specification.new do |s|
     'lib/births.rb',
     'lib/refinerycms-cradle-roll.rb',
     'license.md',
-    'readme.md',
-    'test',
-    'test/fixtures',
-    'test/unit',
+    'readme.md'
   ]
   s.test_files        = [
   ]
