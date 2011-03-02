@@ -1,5 +1,5 @@
 class Admin::BirthsController < Admin::BaseController
 
-  crudify :births, :order => "birth_date DESC"
+  crudify :birth, :order => "birth_date DESC"
 
 end
