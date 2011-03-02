@@ -1,6 +1,6 @@
 en:
   plugins:
-    refinerycms_cradle_roll:
+    refinerycms_cradle_rolls:
       title: Cradle Roll
       description: Provides a simple cradle roll section
   admin:
