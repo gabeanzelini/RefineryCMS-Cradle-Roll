@@ -1,15 +1,15 @@
 require 'rails/generators/migration'
 
-class RefinerycmsNewsGenerator < Rails::Generators::NamedBase
+class RefinerycmsCradleRollGenerator < Rails::Generators::NamedBase
   include Rails::Generators::Migration
 
-  source_root File.expand_path('../refinerycms_news/templates/', __FILE__)
-  argument :name, :type => :string, :default => 'news_item', :banner => ''
-  argument :attributes, :type => :array, :default => ["title:string", "body:text", "publish_date:datetime", "image_id:integer", "external_url:string"]
+  source_root File.expand_path('../refinerycms_cradle_roll/templates/', __FILE__)
+  argument :name, :type => :string, :default => 'birth', :banner => ''
+  argument :attributes, :type => :array, :default => ["name:string", "birth_date:datetime", "image_id:integer"]
 
   def generate
     # seed file
-    template 'db/seeds/seed.rb', Rails.root.join('db/seeds/refinerycms_news.rb')
+    template 'db/seeds/seed.rb', Rails.root.join('db/seeds/refinerycms_cradle_roll.rb')
 
     next_migration_number = ActiveRecord::Generators::Base.next_migration_number(File.dirname(__FILE__))
     template('db/migrate/migration_number_create_singular_name.rb',
