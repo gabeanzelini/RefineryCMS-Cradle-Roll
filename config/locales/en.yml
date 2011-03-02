@@ -1,0 +1,40 @@
+en:
+  plugins:
+    refinerycms_cradle_roll:
+      title: Cradle Roll
+      description: Provides a simple cradle roll section
+  admin:
+    births:
+      birth:
+        view_live_html: "View this birth live <br/><em>(opens in a new window)</em>"
+        edit: "Edit this birth"
+        delete: "Remove this birth forever"
+        birth_date: "Birth Date"
+      index:
+        actions: Actions
+        create: "Add Birth"
+        birth: Births
+        no_items: "Sorry, no results found."
+        no_items_yet: 'There are no births yet. Click "Add Births" to add your first birth.'
+  births:
+    show:
+      back_to_index: "Back to all births"
+      birth_date: "Birth Date"
+    recent_posts:
+      recent_posts: Recent Births
+    index:
+      birth_date: "Birth Date"
+      read_more: Read more
+      no_items_yet: There are no births entries yet.
+  activerecord:
+    attributes:
+      birth:
+        title: Name
+        birth_date: Birth date
+        image: &image Image
+    models:
+      birth: Birth
+  shared:
+    admin:
+      image_picker:
+        image: *image

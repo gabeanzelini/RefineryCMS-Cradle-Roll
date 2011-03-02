@@ -1,0 +1,24 @@
+<% content_for :body_content_title do %>
+  <%= t('plugins.refinerycms_cradle_roll.title') %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <%= @page[:body] if @births.offset == 0 %>
+
+  <% if @births.any? %>
+    <% @births.each do |item| %>
+      <article class="birth_truncated">
+        <h3><%= link_to item.name, birth_url(item) %></h3>
+        <p>
+          <small><%= t('.birth_date') %> <%= l(item.birth_date, :format => :long) %></small>
+        </p>
+      </article>
+    <% end %>
+
+    <%= will_paginate(@births) %>
+  <% else %>
+    <p><em><%= t('.no_items_yet') %></em></p>
+  <% end %>
+<% end -%>
+
+<%= render :partial => "/shared/content_page" %>
