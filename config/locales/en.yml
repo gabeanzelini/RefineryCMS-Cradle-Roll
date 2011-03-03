@@ -25,7 +25,7 @@ en:
     index:
       birth_date: "Birth Date"
       read_more: Read more
-      no_items_yet: There are no births entries yet.
+      no_items_yet: There are no births yet.
   activerecord:
     attributes:
       birth:
