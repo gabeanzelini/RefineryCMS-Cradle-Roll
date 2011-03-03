@@ -1,5 +1,5 @@
 <% content_for :body_content_title do %>
-  <%= t('plugins.refinerycms_cradle_roll.title') %>
+  <%= t('plugins.refinerycms_cradle_rolls.title') %>
 <% end %>
 
 <% content_for :body_content_left do %>
@@ -8,7 +8,8 @@
   <% if @births.any? %>
     <% @births.each do |item| %>
       <article class="birth_truncated">
-        <h3><%= link_to item.name, birth_url(item) %></h3>
+      <%= image_tag item.image.thumbnail('175x175').url %>
+        <h3><%= item.name %></h3>
         <p>
           <small><%= t('.birth_date') %> <%= l(item.birth_date, :format => :long) %></small>
         </p>

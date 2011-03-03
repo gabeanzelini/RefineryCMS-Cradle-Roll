@@ -17,7 +17,7 @@ protected
     @births = Birth.latest
   end
 
-  def find_published_births
+  def find_born_births
     @births = Birth.born.paginate(:page => params[:page],
                                   :per_page => Birth.per_page)
   end
@@ -27,7 +27,7 @@ protected
   end
 
   def find_page
-    @page = Page.find_by_link_url("/cradle-roll")
+    @page = Page.find_by_link_url("/births")
   end
 
 end

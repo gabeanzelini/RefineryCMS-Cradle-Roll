@@ -9,6 +9,8 @@ class Birth < ActiveRecord::Base
 
   default_scope :order => "birth_date DESC"
 
+  alias_attribute :title, :name
+
   # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
   # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
   scope :born, lambda {
