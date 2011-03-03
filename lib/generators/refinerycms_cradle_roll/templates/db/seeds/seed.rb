@@ -5,10 +5,10 @@ end
 
 page = Page.create(
   :title => "Cradle Roll",
-  :link_url => "/cradle_roll",
+  :link_url => "/births",
   :deletable => false,
   :position => ((Page.maximum(:position, :conditions => {:parent_id => nil}) || -1)+1),
-  :menu_match => "^/cradle_roll.*$"
+  :menu_match => "^/births.*$"
 )
 
 Page.default_parts.each do |default_page_part|

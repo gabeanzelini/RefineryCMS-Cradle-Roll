@@ -8,7 +8,7 @@ module Refinery
       config.after_initialize do
         Refinery::Plugin.register do |plugin|
           plugin.name = "refinerycms_cradle_rolls"
-          plugin.menu_match = /(admin|refinery)\/cradle_roll$/
+          plugin.menu_match = /(admin|refinery)\/births?$/
           plugin.url = {:controller => 'admin/births', :action => 'index'}
           plugin.activity = {
             :class => Birth,
