@@ -2,9 +2,10 @@
   <%= t('plugins.refinerycms_cradle_rolls.title') %>
 <% end %>
 
+<h1 class="full">Morton General Hospital Cradle Roll</h1>
+
 <% content_for :body_content_left do %>
   <%= @page[:body] if @births.offset == 0 %>
-
   <% if @births.any? %>
     <% @births.each do |item| %>
       <article class="birth_truncated">
