@@ -2,7 +2,7 @@
 <% content_for :body_content_left do %>
   <article class="birth">
     <p>
-      <small><%= t('.birth_date') %> <%= l(@birth.birth_date, :format => :long) %></small>
+      <small><%= t('.birth_date') %> <%= @birth.birth_date.strftime("%d %I:%M %p") %></small>
     </p>
     <p>
       <small><%= t('.length') %> <%= @birth.length %></small>
