@@ -5,7 +5,7 @@ class RefinerycmsCradleRollGenerator < Rails::Generators::NamedBase
 
   source_root File.expand_path('../refinerycms_cradle_roll/templates/', __FILE__)
   argument :name, :type => :string, :default => 'birth', :banner => ''
-  argument :attributes, :type => :array, :default => ["name:string", "birth_date:datetime", "image_id:integer"]
+  argument :attributes, :type => :array, :default => ["name:string", "birth_date:datetime", "image_id:integer", "weight:string", "length:string"]
 
   def generate
     # seed file
