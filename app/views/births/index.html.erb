@@ -11,15 +11,9 @@
       <article class="birth_truncated">
       <%= image_tag item.image.thumbnail('175x175').url %>
         <h3><%= item.name %></h3>
-        <p>
-          <small><%= t('.birth_date') %> <%= item.birth_date.strftime("%d %I:%M %p") %></small>
-        </p>
-        <p>
-          <small>Length <%= item.length %></small>
-        </p>
-        <p>
-          <small>Weight <%= item.weight %></small>
-        </p>
+        <div class="year"><strong>Born:</strong> <%= item.birth_date.strftime("%B %e, %Y") %></div>
+        <div class="year"><strong>Length:</strong> <%= item.length %></div>
+        <div class="year"><strong>Weight:</strong> <%= item.weight %></div>
       </article>
     <% end %>
 
